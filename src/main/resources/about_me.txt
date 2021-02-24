@@ -1,0 +1,19 @@
+{
+  "name": "Arkadiusz",
+  "surname": "Aptewicz",
+  "age": 28,
+  "company": "Schenker Technology Center",
+  "experience": "7 years",
+  "socials": [
+"linkedin.com/in/arkadiusz-aptewicz-248a49b9/",
+"github.com/arteki65"
+  ],
+  "technologies": [
+		"JAVA",
+		"KOTLIN",
+		"DART",
+		"ANDROID",
+		"FLUTTER",
+		"SPRING"
+  ]
+}
