@@ -14,40 +14,35 @@ import pl.sda.zdjavapol73.tasks.regularexpression.RegularExpressions;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
+import java.util.Random;
 
 public class Main {
     public static void main(String[] args) {
         Collection<Task> tasks = new ArrayList<>();
-//                tasks.add(new DateAndTime());
-        //        tasks.add(new RegularExpressions());
-//        tasks.add(new DateTimeIndividual());
-//        tasks.add(new RegularExpressions());
-//        tasks.add(new FileReader());
-//        tasks.add(new FileReaderIndividual());
-//        tasks.add(new FileWriter());
-     //   tasks.add(new ReadWrite());
-   tasks.add(new FunctionalIndividual());
+        tasks.add(new DateAndTime());
+        tasks.add(new RegularExpressions());
+        tasks.add(new DateTimeIndividual());
+        tasks.add(new RegularExpressions());
+        tasks.add(new FileReader());
+        tasks.add(new FileReaderIndividual());
+        tasks.add(new FileWriter());
+        tasks.add(new ReadWrite());
+        tasks.add(new FunctionalIndividual());
 
         for (Task task : tasks) {
             task.run();
         }
 
 
+        System.out.println(new Random().nextInt(18) + 1);
 
-
-
-
-        //        System.out.println(new Random().nextInt(18) + 1);
-
-//        final String[] strings = {"To", "jest", "przykład"};
+        final String[] strings = {"To", "jest", "przykład"};
 
         /*for (String string : strings) {
             System.out.println(string);
         }*/
 
     }
-
-
 
 
 }

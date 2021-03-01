@@ -5,9 +5,7 @@ import pl.sda.zdjavapol73.api.Task;
 import java.util.*;
 
 // all transformators should change content to camelCase
-// i.e. SDA -> sDa
-// Arek -> aReK
-// test -> tEsT
+
 public class FunctionalIndividual implements Task {
     @Override
     public void run() {
@@ -48,18 +46,17 @@ public class FunctionalIndividual implements Task {
         System.out.println("Hello from " + getClass().getSimpleName());
         final TransformableString transformableString = new TransformableString("TestForHomework");
         System.out.println("String before transformation: " + transformableString);
-        final TransformableString transformedString = transformableString.transss((arg) -> toCamelCase(arg));
+        final TransformableString transformedString = transformableString.transss(FunctionalIndividual::toCamelCase);
         System.out.println("String after transformation: " + transformedString);
 
     }
 
 
-
-    static String toCamelCase(String s) {
+     static String toCamelCase(String s) {
 
         String sLowerCase = s.toLowerCase();
         char[] myArray = sLowerCase.toCharArray();
-        String finalTekst = "";
+        String finalText = "";
         String oneSign = "";
 
         for (int i = 0; i < myArray.length; i++) {
@@ -69,11 +66,10 @@ public class FunctionalIndividual implements Task {
             } else {
                 oneSign = String.valueOf(myArray[i]);
             }
-            finalTekst = finalTekst + oneSign;
+            finalText = finalText + oneSign;
         }
-        return finalTekst;
+        return finalText;
     }
-
 
 
 }
@@ -85,21 +81,8 @@ class MyIndywidualTranformator implements StringTransformator {
     @Override
     public String transform(String s) {
 
-        String sLowerCase = s.toLowerCase();
-        char[] myArray = sLowerCase.toCharArray();
-        String finalTekst = " ";
-        String oneSign = "";
+      return FunctionalIndividual.toCamelCase(s);
 
-        for (int i = 0; i < myArray.length; i++) {
-            if (i % 2 != 0) {
-                oneSign = String.valueOf(myArray[i]);
-                oneSign = oneSign.toUpperCase();
-            } else {
-                oneSign = String.valueOf(myArray[i]);
-            }
-            finalTekst = finalTekst + oneSign;
-        }
-        return finalTekst;
     }
 
 }

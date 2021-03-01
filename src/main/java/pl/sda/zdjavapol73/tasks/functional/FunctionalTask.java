@@ -48,9 +48,7 @@ public class FunctionalTask implements Task {
         System.out.println("String after transformation: " + transformedString);
     }
 }
-// wewnetrzna klasa ktora implementuje Interface, ale w obowiazku jej jest nadpisac ta metode
-// tzn nadac jej cialo metody
-// to nadpisanie po prostu do tektu dodaje !!! i tyle
+
 class MyTransformator implements StringTransformator {
 
     @Override
